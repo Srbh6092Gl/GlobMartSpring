@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Definition for employee bean using constructor dependency -->
+    <bean name = "emp1" class = "org.example.entity.Employee" autowire="byName">
+        <property name="empId" value="10"/>
+        <property name="firstName" value="Abc"/>
+        <property name="lastName" value="Def"/>
+        <property name="role" value="GM"/>
+        <property name="department" value="Accounts"/>
+<!--        <property name="address" value="10H"/>-->
+    </bean>
+    <bean name = "emp2" class = "org.example.entity.Employee" autowire="byName">
+        <property name="empId" value="20"/>
+        <property name="firstName" value="Abc"/>
+        <property name="lastName" value="Def"/>
+        <property name="role" value="GM"/>
+        <property name="department" value="Accounts"/>
+<!--        <property name="address" value="10H"/>-->
+    </bean>
+    <bean name="address" class="org.example.entity.Address">
+        <property name="city" value="Gkp"/>
+        <property name="state" value="up"/>
+        <property name="pincode" value="111111"/>
+    </bean>
+
+</beans>
